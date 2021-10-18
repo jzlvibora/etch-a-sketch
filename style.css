@@ -1,0 +1,21 @@
+/* .container{
+    display:flex;
+} */
+/* #container{
+    display:flex;
+    align-items: center;
+} */
+.box{
+    border: 1px solid black;
+    height:35px;
+    width:35px;
+}
+.boxCon{
+     
+     display:flex;
+     justify-content: center;
+     
+}
+/* body{
+    background-color: red;
+} */

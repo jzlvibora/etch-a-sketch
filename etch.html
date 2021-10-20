@@ -6,50 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
     
 </head>
 <body>
+    <h1>Etch-a-Sketch</h1>
+    <div class="fullContainer">
     <div id="container">
+    </div>
+    <div class = "options">
+        <label for="gridRange" id="gridText"><b>Select grid# </b></label>
+        <input type="range" min="1" max="100"  id="gridRange" step="1">
+        <label for="color" id="color"><b>Color Picker</b></label>
+        <input type="color"name="color">
+        <button id="clearButton"><b>Clear</b></button>
+        <button id="grayScale"><b>Grayscale</b></button>
+        <button id="random"><b>Random</b></button>
+        <button id="eraser"><b>Eraser</b></button>
+    </div>
+    
+</div>
 
-    </div>
-    <!-- <div class="container">
-        <div id="1st">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-    </div>
-    <div id="1st">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-    </div>
-    <div id="1st">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>10</div>
-    </div>
-    </div> -->
     <script src="app.js"></script>
 </body>
 </html>

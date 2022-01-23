@@ -1,81 +1,177 @@
-/* .container{
-    display:flex;
-} */
-/* #container{
-    display:flex;
-    align-items: center;
-} */
-.box{
-    border: 1px solid white;
-    height:35px;
-    width:35px;
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap');
+
+:root{
+  --color-custom: #F0D9FF;
+  --color-classic: #8DA47E;
+  --color-random: #E8D595;
+  --color-eraser:  #E7CBA9;
+  --color-clear:  #E9BBB5;
+  --color-neutral: #FAF9F6;
+  --color-black: #424949;
+  
+  --padding-button:8px;
+  
+  --margin-big: 4rem;
+  --margin-small: 2.5rem;
+  
+  --font-family-main: 'Amatic SC', cursive;
+  --font-family-header: 'Festive', cursive;
+  --font-size-main: 2.5rem;
+  --font-weight-main:600;
 }
-.boxCon{
-     
-     display:flex;
-     justify-content: center;
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
-#container{
-border:solid white;
-}    
+
+html{
+  font-size: 62.5%;
+  
+}
 
 body{
-    background-color: #AAD9CD;
-    font-family: 'Amatic SC', cursive;
-    
+  height:100vh;
+  font-size:var(--font-size-main);
+  font-family:var(--font-family-main);
+  background: linear-gradient(217deg, #0A043C, #C8EED9 70.71%),
+            linear-gradient(127deg, #FFED99, #FFC2B4 70.71%),
+            linear-gradient(336deg, #0A043C, #93329E 70.71%);
 }
 
-#gridText{
-    font-size:25px;
-}
-#color{
-    font-size:25px;
+.header{
+  text-align:center;
+  margin-top:5rem;
+  font-family: 'Londrina Sketch', cursive;
+  font-size:4rem;
+
 }
 
-.options button{
-    border-radius:20px;
+.mainContainer{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  font-size: 2.5rem;
+  font-weight:600;
+  padding:5rem;
+}
+
+.canvasContainer{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:60rem;
+  width:60rem;
+  background-color:blue;
+  border-radius:40px;
+  background-color:#02475E;
+}
+
+.mainContainer__canvas{
+  height:50rem;
+  width:50rem;
+  background-color:var(--color-neutral);
+  display:flex;
+border:5px solid white;
+background-color:white;
+flex-direction:column;
+}
+
+.mainContainer__menu{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  font-size: 2.5rem;
+  margin-left:-10rem;
+}
+
+.menu__buttons{
+  display:flex;
+  flex-direction:column;
+}
+
+.sizeSelector{
+  display:flex;
+  align-items:center;
+  margin-bottom:8rem;  
+}
+
+#sizeSelector{
+  margin:10px;
+  width:7rem;
+  font-size:2.5rem;
+  font-weight:600;
+  border-radius:.5rem;
+  font-family: 'Amatic SC', cursive;
+  padding:1rem;
+  background-color:#D4E2D4;
+
+}
+
+button{
+    width:12rem;
+    height:5rem;
+    border-radius:2rem;
+    border : none;
     color:white;
-    border:solid white;
     padding:8px;
     font-family: 'Amatic SC', cursive;
-    font-size: 25px;
-    width:120px;
+    font-size: 2.5rem;
+    font-weight:600;
+    margin:0px 4rem 2.5rem 4rem;
+   -webkit-box-shadow: inset 0px 5px 7px #c1c1c1;
+     -moz-box-shadow: inset 0px 5px 7px #c1c1c1;
+          box-shadow: inset 0px px 7px #c1c1c1;
+    outline: none;
+    cursor: pointer;
+    transition:.2s;
 }
 
-#clearButton{
-    background-color: #E9BBB5;
+button:active {
+    transform:translateY(3px);
+    box-shadow: 5px 3px 5px gray;    
 }
+
+#custom{
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+  background-color:var(--color-custom);
+}
+
+#colorPicker{
+  width:2.5rem;
+}
+
+#classic{
+  background-color:var(--color-classic);
+}
+
 #random{
-    background-color: #E8D595;
+   background-color:var(--color-random);
 }
-#grayScale{
-    background-color: #8DA47E;
-}
-#eraser{
-    background-color: #E7CBA9;
-}
-#color{
-    margin:20px;
-}
-#gridRange{
-    margin:20px;
-} 
 
-h1{
-    font-family: 'Festive', cursive;
-    font-size: 60px;
-    text-align: center;
-    color:white;
+#eraser{
+  background-color:var(--color-eraser);
 }
-.fullContainer{
-    display:flex;
-    justify-content: space-evenly;
+#clear{
+  background-color:var(--color-clear);
 }
-.options{
-    align-items: center;
+
+footer{
+  margin-top:10rem;
+  margin-bottom:10rem;
+  text-align:center;
 }
-.options button{
-    display:block;
-    margin:20px;
-    
+ 
+.box{
+  border: .0001px solid black;
+  flex-grow:1;
+  height:100%;
 }
+.boxCon{
+  flex-basis:100%;
+  display:flex;  
+}  
+ 

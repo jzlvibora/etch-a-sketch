@@ -1,32 +1,45 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
     
 </head>
 <body>
-    <h1>Etch-a-Sketch</h1>
-    <div class="fullContainer">
-    <div id="container">
-    </div>
-    <div class = "options">
-        <label for="gridRange" id="gridText"><b>Select grid# </b></label>
-        <input type="range" min="1" max="100"  id="gridRange" step="1">
-        <label for="color" id="color"><b>Color Picker</b></label>
-        <input type="color"name="color">
-        <button id="clearButton"><b>Clear</b></button>
-        <button id="grayScale"><b>Grayscale</b></button>
-        <button id="random"><b>Random</b></button>
-        <button id="eraser"><b>Eraser</b></button>
-    </div>
     
-</div>
+    <section class="main">
+      <div class="header">
+      <h1 class="header__title">Etch-a-Sketch</h1>
+      </div>
+      <div class="mainContainer">
+        <div class="canvasContainer">
+    <div class="mainContainer__canvas">
+    </div>
+        </div>
+    <div class="mainContainer__menu">
+      <div class="sizeSelector">
+        <label for="sizeSelector__label" id="sizeSelector__label">Grid size</label>
+        <input type="number"  min="1" max="100"  id="sizeSelector" step="1" > </div>
+      <div class="menu__buttons">
+      
+      <button id="custom" class="mode">
+        Custom
+        <input type="color"name="color"  id="colorPicker">  </button>
+        <button id="classic" class="mode">Classic</button>
+        <button id="random" class="mode">Random</button>
+        <button id="eraser" class="mode">Eraser</button>
+        <button id="clear">Clear</button>
+        
+        </div>
+    </div>
+  </section>   
+<footer>
+  	Copyright &#169; 2022 jzlvibora
+</footer>
 
     <script src="app.js"></script>
 </body>

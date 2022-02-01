@@ -95,6 +95,7 @@ const paint = function(mode){
 //initial state
 const init = function(){
 gridNum=16;
+activeState='random';
 sizeSelectorEl.value=16;
 gridCreator();
 paint(activeState);

@@ -1,7 +1,7 @@
 const mainContainer__canvas = document.querySelector('.mainContainer__canvas');
 const sizeSelectorEl = document.querySelector('#sizeSelector');
 const customBtn = document.querySelector('#custom');
-const clearBtn = document.querySelector('#clear');
+const resetBtn = document.querySelector('#reset');
 const classicBtn = document.querySelector('#classic');
 const randomBtn = document.querySelector('#random');
 const eraserBtn = document.querySelector('#eraser');
@@ -26,30 +26,10 @@ const gridCreator = function() {
         }      
     }
 
-
-//eraser function
-const eraserFn = function() {
-  return '';
-}
-
-//random color generator
-const randomFn = function(){
- return `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
-}
-
-//classic color
-const classicFn = function(){
-  return 'gray';
-}
-
-//custom color
-const customFn = function(){
-  return colorPicker.value;
-}
-
+//eventlisteners
 const loadEventListeners = function(){
 //Add event listener to grid size selector
-sizeSelectorEl.addEventListener('change', function(){
+  sizeSelectorEl.addEventListener('change', function(){
   mainContainer__canvas.innerHTML='';
   gridNum = this.value;
   console.log(gridNum);
@@ -64,8 +44,8 @@ mode.forEach((mod)=>{
   })
 })
   
-  //add event listener to clear button
-  clearBtn.addEventListener('click', function(){
+  //add event listener to reset button
+  resetBtn.addEventListener('click', function(){
     mainContainer__canvas.innerHTML='';
     init();
   })
@@ -76,16 +56,16 @@ const paint = function(mode){
   mainContainer__canvas.addEventListener('mouseover', function(e){
    if(e.target.classList.contains('box')){
      if(mode==='eraser') {
-       e.target.style.backgroundColor=eraserFn()
+       e.target.style.backgroundColor='';
      }
      else if(mode==='random'){
-       e.target.style.backgroundColor=randomFn();
+       e.target.style.backgroundColor=`rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
      }
      else if(mode==='classic'){
-       e.target.style.backgroundColor=classicFn();
+       e.target.style.backgroundColor='black';
      }
      else if(mode==='custom'){
-       e.target.style.backgroundColor=customFn();
+       e.target.style.backgroundColor= `${colorPickerEl.value}`;
      }
      } 
 })
@@ -103,6 +83,8 @@ loadEventListeners();
 }
 
 init();
+
+
 
 
 

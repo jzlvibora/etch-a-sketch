@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
 :root{
   --color-custom: #F0D9FF;
   --color-classic: #8DA47E;
@@ -15,7 +16,6 @@
   --margin-small: 2.5rem;
   
   --font-family-main: 'Amatic SC', cursive;
-  --font-family-header: 'Festive', cursive;
   --font-size-main: 2.5rem;
   --font-weight-main:600;
 }
@@ -32,32 +32,32 @@ html{
 }
 
 body{
-  height:100vh;
   font-size:var(--font-size-main);
   font-family:var(--font-family-main);
-  background: linear-gradient(217deg, #0A043C, #C8EED9 70.71%),
-            linear-gradient(127deg, #FFED99, #FFC2B4 70.71%),
-            linear-gradient(336deg, #0A043C, #93329E 70.71%);
+  background: linear-gradient(217deg, #100753, #428a62 70.71%),
+              linear-gradient(100deg, #f1b254, #dd9c8d 70.71%),
+              linear-gradient(336deg, #0e093b, #e994f3 70.71%);
 }
 
 .header{
   text-align:center;
+  text-transform: uppercase;
   margin-top:5rem;
-  font-family: 'Freckle Face', cursive;
+  font-family: 'Rowdies', cursive;
   font-size:4rem;
   color:white;
-
 }
 
 .mainContainer{
   display:flex;
   justify-content:space-evenly;
   align-items:center;
-  font-size: 2.5rem;
-  font-weight:600;
   padding:5rem;
-  width:140rem;
+  width:110rem;
   margin:auto;
+  margin-top:3rem;
+  background-color: #a6dbd01f;
+  border-radius: 2rem;  
 }
 
 .canvasContainer{
@@ -66,7 +66,6 @@ body{
   align-items:center;
   height:60rem;
   width:60rem;
-  background-color:blue;
   border-radius:40px;
   background-color:#02475E;
 }
@@ -76,29 +75,30 @@ body{
   width:50rem;
   background-color:var(--color-neutral);
   display:flex;
-border:5px solid white;
-background-color:white;
-flex-direction:column;
+  border:5px solid white;
+  background-color:white;
+  flex-direction:column;
 }
 
 .mainContainer__menu{
   display:flex;
   flex-direction:column;
   align-items:center;
-  font-size: 2.5rem;
+  font-weight: bolder;
   
 }
 
 .menu__buttons{
   display:flex;
   flex-direction:column;
-  
 }
 
 .sizeSelector{
   display:flex;
   align-items:center;
   margin-bottom:8rem;  
+  color:white;
+  font-size: 3rem;
 }
 
 #sizeSelector{
@@ -109,7 +109,9 @@ flex-direction:column;
   border-radius:.5rem;
   font-family: 'Amatic SC', cursive;
   padding:1rem;
-  background-color:#D4E2D4;
+  background-color:white;
+  border-radius:10px;
+  border:none;
 
 }
 
@@ -119,10 +121,10 @@ button{
     border-radius:2rem;
     border : none;
     color:white;
-    padding:8px;
+    padding:.8rem;
     font-family: 'Amatic SC', cursive;
-    font-size: 2.5rem;
-    font-weight:600;
+    font-size: 2.8rem;
+    font-weight: bolder;
     margin:0px 4rem 2.5rem 4rem;
    -webkit-box-shadow: inset 0px 5px 7px #c1c1c1;
      -moz-box-shadow: inset 0px 5px 7px #c1c1c1;
@@ -159,12 +161,12 @@ button:active {
 #eraser{
   background-color:var(--color-eraser);
 }
-#clear{
+#reset{
   background-color:var(--color-clear);
 }
 
 footer{
-  margin-top:10rem;
+  margin-top:5rem;
   margin-bottom:10rem;
   text-align:center;
 }
@@ -174,6 +176,7 @@ footer{
   flex-grow:1;
   height:100%;
 }
+
 .boxCon{
   flex-basis:100%;
   display:flex;  
